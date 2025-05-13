@@ -1,0 +1,71 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use App\Models\Test;
+use Illuminate\Http\Request;
+
+class TestController extends Controller
+{
+    /**
+     * Display a listing of the resource.
+     */
+    public function viewTest()
+    {
+        return view('test');
+    }
+    public function learnMore()
+    {
+        $name = "Shibu";
+        $age = 43;
+        return view('learn_more',compact('name','age'));
+    }
+
+    /**
+     * Show the form for creating a new resource.
+     */
+    public function create()
+    {
+        //
+    }
+
+    /**
+     * Store a newly created resource in storage.
+     */
+    public function store(Request $request)
+    {
+        //
+    }
+
+    /**
+     * Display the specified resource.
+     */
+    public function show(Test $test)
+    {
+        //
+    }
+
+    /**
+     * Show the form for editing the specified resource.
+     */
+    public function edit(Test $test)
+    {
+        //
+    }
+
+    /**
+     * Update the specified resource in storage.
+     */
+    public function update(Request $request, Test $test)
+    {
+        //
+    }
+
+    /**
+     * Remove the specified resource from storage.
+     */
+    public function destroy(Test $test)
+    {
+        //
+    }
+}
