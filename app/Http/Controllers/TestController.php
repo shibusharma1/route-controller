@@ -17,8 +17,10 @@ class TestController extends Controller
     public function learnMore()
     {
         $name = "Shibu";
-        $age = 43;
-        return view('learn_more',compact('name','age'));
+        $age = 18;
+        // return view('learn_more',compact('name','age'));
+        $data = compact('name','age');
+        return view('learn-more')->with('data');
     }
 
     /**
