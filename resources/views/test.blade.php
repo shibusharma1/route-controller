@@ -9,5 +9,8 @@
 <body>
     <a href="{{ url('/')}}">Back</a>
     <h1>TEST</h1>
+    Hello,
+  {{ $name }}
+  and your email is {{ $email }}
 </body>
 </html>

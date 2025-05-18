@@ -2,26 +2,17 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Test;
+use App\Models\Auth;
 use Illuminate\Http\Request;
 
-class TestController extends Controller
+class AuthController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
-    public function viewTest()
+    public function index()
     {
-        return view('test');
-    }
-    public function learnMore()
-    {
-        $name = "Shibu";
-        $age = 18;
-        
-        // return view('learn_more',compact('name','age'));
-        $data = compact('name','age');
-        return view('learn-more')->with('data');
+        //foreach
     }
 
     /**
@@ -30,6 +21,7 @@ class TestController extends Controller
     public function create()
     {
         //
+        return view('register');
     }
 
     /**
@@ -37,13 +29,18 @@ class TestController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
+    // dump and die
+        // dd($request->all());
+        $name = $request->name;
+        $email = $request->email;
+         return view('test',compact('name','email'));
     }
 
     /**
      * Display the specified resource.
      */
-    public function show(Test $test)
+    public function show(Auth $auth)
     {
         //
     }
@@ -51,7 +48,7 @@ class TestController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Test $test)
+    public function edit(Auth $auth)
     {
         //
     }
@@ -59,7 +56,7 @@ class TestController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Test $test)
+    public function update(Request $request, Auth $auth)
     {
         //
     }
@@ -67,7 +64,7 @@ class TestController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Test $test)
+    public function destroy(Auth $auth)
     {
         //
     }
